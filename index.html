@@ -1,0 +1,89 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+
+    <!--css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>BookMark App</title>
+</head>
+<body>
+    <main class="interface py-5 position-relative">
+        <div class="container d-flex flex-column justify-content-center align-items-center">
+            <h1 class="py-2 position-relative">Bookmarker</h1>
+            <hr class="mt-5">
+            <div class="bookmark-body w-100 p-3 py-2 d-flex flex-column justify-content-center align-items-center gap-4 position-relative">
+                <h2> 
+                    <i class="fa-solid fa-bookmark"></i>
+                    Bookmark your favorite sites
+                    <i class="fa-solid fa-bookmark"></i>
+                </h2>
+                <form class="site-url w-100 d-flex flex-column justify-content-center">
+                    <div class="mb-3">
+                        <i class="fa-solid fa-book-bookmark mx-2"></i>
+                        <label for="productName" class="fw-bold py-2">Site Name</label>
+                        <input type="text" id="siteName" class="form-control" placeholder="Bookmark Name">
+                    </div>
+                    <div class="">
+                        <i class="fa-solid fa-link mx-2"></i>
+                        <label for="productPrice" class="fw-bold py-2">Site URL</label>
+                        <input type="url" id="siteUrl" class="form-control" placeholder="Website Url">
+                    </div>
+                </form>
+                <button onclick="submitInfo()" type="button" id="submitBtn" class=" btn px-5">Submit</button>
+                
+                <hr class="mt-1">
+                <input onkeyup = "search(this.value)" class="my-3 form-control" placeholder="Search by Book mark Name">
+
+            </div>
+            <table class="table table-striped text-center bg-light">
+                <thead>
+                    <th>index</th>
+                    <th>Website Name</th>
+                    <th>Visit</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </thead>
+                <tbody id="tableData">
+                    <!--<tr>
+                        <td>0</td>
+                        <td>Facebook</td>
+                        <td>
+                            <button class="visit btn btn-success">
+                                <i class="fa-solid fa-eye"></i>
+                                Visit
+                            </button>
+                        </td>
+                        <td>
+                            <button class="visit btn btn-warning">
+                                <i class="fa-solid fa-eye"></i>
+                                Update
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-danger">
+                                <i class="fa-solid fa-trash"></i>
+                                Delete
+                            </button>
+                        </td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <!--javascript-->
+    <script src="js/main.js"></script>
+</body>
+</html>
